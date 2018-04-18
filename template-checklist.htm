@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Template Checklist</title>
+    <meta name="description" content="How to do anything">
+    <meta name="Vinay D." content="checklist">
+
+    <style type="text/css">
+        body
+        {
+            background: DarkGray;
+            font-family: sans-serif;
+        }
+
+        #container
+        {
+            padding: 15px 15px 15px 15px;
+            margin: auto;
+            background: White;
+            width:500px;
+            height: 500px;
+            border: 2px solid;
+            border-radius: 15px;
+            margin-top: 100px;
+        }
+
+        h2
+        {
+            text-align: center;
+        }
+
+        .list-item-done
+        {
+            text-decoration:line-through;
+        }
+
+        #checklist-box
+        {
+            padding-left: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+    <script type="text/javascript">
+        function handleClick(cb)
+        {
+            // console.log("Changed checkbox with id = " + cb.id);
+            // console.log("Clicked, new value = " + cb.checked);
+            var itemText = document.getElementById(cb.id + "-text");
+            if(cb.checked)
+            {
+                itemText.classList.add("list-item-done");
+            }
+            else
+            {
+                itemText.classList.remove("list-item-done");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h2>How to do anything<br>***</h2>
+        <div id="checklist-box">
+            <input type="checkbox" id="item1" onclick='handleClick(this);' autocomplete="off">
+                <span id="item1-text">
+                    Start with something you already know is easy to do
+                </span>
+            <br>
+            <input type="checkbox" id="item2" onclick='handleClick(this);' autocomplete="off">
+                <span id="item2-text">
+                    Next, take on to something that worked in the past
+                </span>
+            <br>
+            <input type="checkbox" id="item3" onclick='handleClick(this);' autocomplete="off"> 
+                <span id="item3-text">
+                    Take a break
+                </span>
+            <br>
+            <input type="checkbox" id="item4" onclick='handleClick(this);' autocomplete="off">
+                <span id="item4-text">
+                    Now stuff that really matters
+                </span>
+            <br>
+            <input type="checkbox" id="item5" onclick='handleClick(this);' autocomplete="off">
+                <span id="item5-text">
+                    All done
+                </span>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
